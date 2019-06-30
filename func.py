@@ -8,7 +8,8 @@ def search(s):
 	for f in os.listdir('./'):
 		if os.path.isfile(f):
 			fpath = os.path.join(os.path.abspath('.'),f)
-			if s in os.path.splitext(fpath)[0]:
+			#if s in os.path.splitext(fpath)[0]:
+			if s in os.path.split(fpath)[1]:
 				print fpath
 def search1(s,dirpath='./'):
 	if not os.path.isdir(dirpath):
@@ -22,6 +23,6 @@ def search1(s,dirpath='./'):
 
 
 if __name__=="__main__":
-	search('py')
+	search('hell')
 	print "======================="
 	search('animal')
